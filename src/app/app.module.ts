@@ -1,16 +1,48 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { MatGridListModule, MatButtonModule, MatIconModule, MatDialogModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { AlbumListComponent } from './album-list/album-list.component';
+import { AlbumDetailsComponent } from './album-details/album-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AlbumDialogComponent } from './album-dialog/album-dialog.component';
+
+const appRoutes: Routes = [
+  { path: 'albums', component: AlbumListComponent },
+  { path: 'album/:id',      component: AlbumDetailsComponent },
+  { path: '',
+    redirectTo: '/albums',
+    pathMatch: 'full'
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlbumListComponent,
+    AlbumDetailsComponent,
+    PageNotFoundComponent,
+    AlbumDialogComponent,
   ],
   imports: [
-    BrowserModule
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
+    BrowserModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AlbumDialogComponent],
 })
 export class AppModule { }

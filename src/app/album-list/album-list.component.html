@@ -1,0 +1,12 @@
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile
+    *ngFor="let album of albums"
+    [colspan]="1"
+    [rowspan]="1">
+    {{album.title}}
+  </mat-grid-tile>
+</mat-grid-list>
+
+<button mat-fab color="accent" bottom-right (click)="openAddAlbumDialog()">
+  <mat-icon aria-label="Add new album">library_add</mat-icon>
+</button>
