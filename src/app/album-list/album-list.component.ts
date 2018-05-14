@@ -10,7 +10,8 @@ import { Album } from './album';
 })
 export class AlbumListComponent implements OnInit {
 
-  albums: Array<Album> = [];
+  albums: Album[] = [];
+
   albumDialogRef: MatDialogRef<AlbumDialogComponent>;
 
   constructor(private dialog: MatDialog) { }

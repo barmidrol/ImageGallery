@@ -10,3 +10,7 @@ button[bottom-right] {
   max-width: 400px;
 }
 
+.album-card {
+  width: 23%;
+}
+
