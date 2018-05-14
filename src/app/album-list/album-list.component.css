@@ -5,3 +5,8 @@ button[bottom-right] {
   left: auto;
   position: fixed;
 }
+
+.example-card {
+  max-width: 400px;
+}
+

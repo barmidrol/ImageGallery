@@ -4,5 +4,6 @@ export class Album {
   description: string;
   latitude: number;
   longitude: number;
-  cover: string;
+  cover: File;
+  coverPreview: string;
 }

@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MatGridListModule, MatButtonModule, MatIconModule, MatDialogModule } from '@angular/material';
+import { MatGridListModule, MatButtonModule, MatIconModule,
+         MatDialogModule, MatFormFieldModule, MatInputModule, MatCardModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -40,6 +42,11 @@ const appRoutes: Routes = [
     MatIconModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
